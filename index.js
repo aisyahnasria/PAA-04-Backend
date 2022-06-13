@@ -6,8 +6,13 @@ const cors = require ("cors");
 const db = require ("./config/database.js");
 // Import router
 const Router = require("./routes/routes.js");
+const port = process.env.PORT || 5000;
 
-const port = process.env.PORT ||5000 ;
+//cors
+import cors from "cors";
+app.use(cors(
+    {origin: "*", credentials: true}
+));
  
 // Init express
 const app = express();
